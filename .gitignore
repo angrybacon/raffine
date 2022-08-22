@@ -1,0 +1,3 @@
+dist/
+node_modules/
+raffine-v[0-9]*.[0-9]*.[0-9]*.tgz
