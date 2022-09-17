@@ -1,7 +1,9 @@
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { compilerOptions } = require('./tsconfig.json');
+
 module.exports = {
-  // extensionsToTreatAsEsm: ['.ts'],
-  // globals: { 'ts-jest': { useESM: true } },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>',
+  }),
   preset: 'ts-jest',
-  // testEnvironment: 'node',
-  // transform: {},
 };
